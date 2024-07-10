@@ -1,18 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class TextLocalization : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    TMP_Text text;
+    public string RusText;
+    public string EngText;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    private void Awake() {
+        text = GetComponent<TMP_Text>();
+    }
+    private void OnEnable() {
+        if (AppSettings.instance.appLanguage == AppLanguage.Russian) text.text = RusText;
+        else text.text = EngText;
     }
 }

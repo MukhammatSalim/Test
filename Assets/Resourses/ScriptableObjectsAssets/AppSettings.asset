@@ -12,3 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 739ed9513ecf6834a8b429ebf84f7525, type: 3}
   m_Name: AppSettings
   m_EditorClassIdentifier: 
+  appLanguage: 1
